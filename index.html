@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <style>
-        */blue
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciplina de Programação</title>
-</head>
 
-<body>
+    <title>Portal do Aluno</title>
+
     <style>
-        */red
-    </style>
-<adicionar color> blue #885
-    <h1>Hello World!</h1>
-
-    <h2>Disciplina de Programação</h2>
-
-    <label>Digite seu nome:</label>
-    <input type="text" id="nome">
-
-    <h3>Digite suas notas:</h3>
-
-    <input type="number" id="nota1" placeholder="Nota 1">
-    <input type="number" id="nota2" placeholder="Nota 2">
-    <input type="number" id="nota3" placeholder="Nota 3">
-    <input type="number" id="nota4" placeholder="Nota 4">
-
-    <br><br>
-
-    <button onclick="calcularMedia()">Calcular Média</button>
-
-    <h3 id="resultado"></h3>
-
-    <script>
-        function calcularMedia() {
-            let nome = document.getElementById("nome").value;
-
-            let nota1 = Number(document.getElementById("nota1").value);
-            let nota2 = Number(document.getElementById("nota2").value);
-            let nota3 = Number(document.getElementById("nota3").value);
-            let nota4 = Number(document.getElementById("nota4").value);
-
-            let media = (nota1 + nota2 + nota3 + nota4) / 4;
-
-            let situacao;
-
-            if (media >= 7) {
-                situacao = "Aprovado";
-            } else {
-                situacao = "Reprovado";
-            }
-
-            document.getElementById("resultado").innerHTML =
-                "Olá " + nome + "! Sua média é " + media.toFixed(2) +
-                "<br>Situação: " + situacao;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
-    </script>
 
-</body>
-</html>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .titulo h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .titulo p {
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 25px;
+            padding: 35px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e2e8f0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #818cf8;
+            box-shadow
