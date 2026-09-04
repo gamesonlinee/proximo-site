@@ -1,1 +1,35 @@
-# proximo-site
+# 1. Nosso primeiro programa
+print("hello world")
+
+# 2. Criando variáveis de tipos diferentes
+x = 10
+nota = 8.75
+nome = "anderson"
+fez_inscricao = True
+
+print(nota)
+print(nome)
+
+print(type(x))
+print(type(nota))
+print(type(nome))
+
+nome = input("Digite seu nome: ")
+
+print(f"Olá {nome}, bem-vindo à disciplina de programação")
+
+nota_1 = int(input("Digite a nota 1: "))
+nota_2 = int(input("Digite a nota 2: "))
+nota_3 = int(input("Digite a nota 3: "))
+nota_4 = int(input("Digite a nota 4: "))
+
+media = (nota_1 + nota_2 + nota_3 + nota_4) / 4
+
+print(media)
+
+if media >= 7:
+    situacao = "Aprovado"
+else:
+    situacao = "Reprovado"
+
+print(situacao)
